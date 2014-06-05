@@ -1,4 +1,12 @@
-﻿.criterion .description {
+﻿/*
+    Sets the style for criteria in a score sheet.
+
+    Each criterium has a description and a specific mark (either inadequate, adequate or good).
+    The description is shown in the left column and the three columns to the right each display
+    a checkbox for a specific mark.
+*/
+
+.criterion .description {
     display : inline-block;
     width : 400px;
 }

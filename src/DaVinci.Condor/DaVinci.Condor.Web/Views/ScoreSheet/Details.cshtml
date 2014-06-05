@@ -2,7 +2,7 @@
 
 @functions
 {
-    private string MarkToClass(DaVinci.Condor.Mark mark)
+    private string MarkToClassName(DaVinci.Condor.Mark mark)
     {
         switch (mark)
         {
@@ -26,7 +26,8 @@
     {
         <li class="criterion">
             <span class="description">@criterion.Description</span>
-            <input type="checkbox" class="mark @MarkToClass(criterion.Mark)">
+            <!-- Each mark has a class so we can display it in the correct column. -->
+            <input type="checkbox" class="mark @MarkToClassName(criterion.Mark)">
         </li>
     }
 </ol>

@@ -7,7 +7,7 @@ namespace DaVinci.Condor.Web.Controllers
     {
         public ActionResult Details(int id)
         {
-            var scoreSheet = new ScoreSheet();
+            var scoreSheet = new ScoreSheetTemplate();
             scoreSheet.Criteria.Add(new Criterion()
             {
                 Id = 1,
