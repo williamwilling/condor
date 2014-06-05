@@ -1,8 +1,32 @@
 ﻿@model DaVinci.Condor.ScoreSheet
 
+@functions
+{
+    private string MarkToClass(DaVinci.Condor.Mark mark)
+    {
+        switch (mark)
+        {
+            case DaVinci.Condor.Mark.Inadequate:
+                return "inadequate";
+                    
+            case DaVinci.Condor.Mark.Adequate:
+                return "adequate";
+                        
+            case DaVinci.Condor.Mark.Good:
+                return "good";
+                
+            default:
+                return String.Empty;
+        }
+    }
+}
+
 <ul>
     @foreach (var criterion in Model.Criteria)
     {
-        <li>@criterion.Description</li>
+        <li>
+            <span class="description">@criterion.Description</span>
+            <span class="@MarkToClass(criterion.Mark)"><input type="checkbox" /></span>
+        </li>
     }
 </ul>
