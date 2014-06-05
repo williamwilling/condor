@@ -1,23 +1,20 @@
-﻿span.adequate, span.inadequate, span.good {
-    display : inline-block;
-    width : 120px;
-}
-
-span.inadequate input {
-    position : relative;
-    left : 0px;
-}
-span.adequate input{
-    position : relative;
-    left : 50px;
-
-}
-span.good input{
-    position : relative;
-    left : 100px;
-}
-
-span.description {
+﻿.criterion .description {
     display : inline-block;
     width : 400px;
+}
+
+.criterion .mark {
+    position : relative;
+}
+
+.criterion .mark.inadequate {
+    left : 0px;
+}
+
+.criterion .mark.adequate {
+    left : 50px;
+}
+
+.criterion .mark.good {
+    left : 100px;
 }

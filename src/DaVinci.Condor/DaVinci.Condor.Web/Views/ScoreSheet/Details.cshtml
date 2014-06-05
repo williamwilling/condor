@@ -21,12 +21,12 @@
     }
 }
 
-<ul>
+<ol>
     @foreach (var criterion in Model.Criteria)
     {
-        <li>
+        <li class="criterion">
             <span class="description">@criterion.Description</span>
-            <span class="@MarkToClass(criterion.Mark)"><input type="checkbox" /></span>
+            <input type="checkbox" class="mark @MarkToClass(criterion.Mark)">
         </li>
     }
-</ul>
+</ol>
