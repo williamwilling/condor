@@ -5,6 +5,19 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Condor", "DaVinci.Condor\DaVinci.Condor.csproj", "{759E6F3E-CC54-4B76-9E91-C708A1E16C70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Condor.Web", "DaVinci.Condor.Web\DaVinci.Condor.Web.csproj", "{001AF8DB-70DE-4C74-807E-CF9C576ADC80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{32E13C73-3944-4236-88E8-378A697CE218}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{F3C24E3D-0D1F-41C5-ACED-96B52A7F7955}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\DaVinciCondorWeb-WAWS-dev.json = PublishScripts\Configurations\DaVinciCondorWeb-WAWS-dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +28,15 @@ Global
 		{759E6F3E-CC54-4B76-9E91-C708A1E16C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{759E6F3E-CC54-4B76-9E91-C708A1E16C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{759E6F3E-CC54-4B76-9E91-C708A1E16C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001AF8DB-70DE-4C74-807E-CF9C576ADC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001AF8DB-70DE-4C74-807E-CF9C576ADC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001AF8DB-70DE-4C74-807E-CF9C576ADC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001AF8DB-70DE-4C74-807E-CF9C576ADC80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3C24E3D-0D1F-41C5-ACED-96B52A7F7955} = {32E13C73-3944-4236-88E8-378A697CE218}
 	EndGlobalSection
 EndGlobal

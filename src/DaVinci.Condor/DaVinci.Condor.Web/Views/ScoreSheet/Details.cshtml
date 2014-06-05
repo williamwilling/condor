@@ -1,0 +1,8 @@
+﻿@model DaVinci.Condor.ScoreSheet
+
+<ul>
+    @foreach (var criterion in Model.Criteria)
+    {
+        <li>@criterion.Description</li>
+    }
+</ul>
