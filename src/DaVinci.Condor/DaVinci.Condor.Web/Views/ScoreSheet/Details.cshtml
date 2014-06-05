@@ -1,33 +1,11 @@
 ﻿@model DaVinci.Condor.ScoreSheet
 
-@functions
-{
-    private string MarkToClassName(DaVinci.Condor.Mark mark)
-    {
-        switch (mark)
-        {
-            case DaVinci.Condor.Mark.Inadequate:
-                return "inadequate";
-                    
-            case DaVinci.Condor.Mark.Adequate:
-                return "adequate";
-                        
-            case DaVinci.Condor.Mark.Good:
-                return "good";
-                
-            default:
-                return String.Empty;
-        }
-    }
-}
-
 <ol>
     @foreach (var criterion in Model.Template.Criteria)
     {
         <li class="criterion">
             <span class="description">@criterion.Description</span>
-            <!-- Each mark has a class so we can display it in the correct column. -->
-            <select class="mark @MarkToClassName(criterion.Mark)">
+            <select class="mark">
                 <option>nog in te vullen</option>
                 <option>voldaan</option>
                 <option>niet voldaan</option>

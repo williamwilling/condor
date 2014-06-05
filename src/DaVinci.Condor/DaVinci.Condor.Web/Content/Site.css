@@ -10,19 +10,3 @@
     display : inline-block;
     width : 400px;
 }
-
-.criterion .mark {
-    position : relative;
-}
-
-.criterion .mark.inadequate {
-    left : 0px;
-}
-
-.criterion .mark.adequate {
-    left : 150px;
-}
-
-.criterion .mark.good {
-    left : 300px;
-}
