@@ -5,7 +5,7 @@ namespace DaVinci.Condor.Web.Controllers
 {
     public class ScoreSheetController : Controller
     {
-        public ActionResult Details(int id)
+        public ActionResult Edit(int id)
         {
             var scoreSheetTemplate = new ScoreSheetTemplate();
             scoreSheetTemplate.Criteria.Add(new Criterion()
@@ -29,6 +29,12 @@ namespace DaVinci.Condor.Web.Controllers
 
             var scoreSheet = new ScoreSheet(scoreSheetTemplate);
 
+            return View(scoreSheet);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int id, ScoreSheet scoreSheet)
+        {
             return View(scoreSheet);
         }
     }
