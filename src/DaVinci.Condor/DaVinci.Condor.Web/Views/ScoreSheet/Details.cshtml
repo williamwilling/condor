@@ -1,4 +1,4 @@
-﻿@model DaVinci.Condor.ScoreSheetTemplate
+﻿@model DaVinci.Condor.ScoreSheet
 
 @functions
 {
@@ -22,12 +22,17 @@
 }
 
 <ol>
-    @foreach (var criterion in Model.Criteria)
+    @foreach (var criterion in Model.Template.Criteria)
     {
         <li class="criterion">
             <span class="description">@criterion.Description</span>
             <!-- Each mark has a class so we can display it in the correct column. -->
-            <input type="checkbox" class="mark @MarkToClassName(criterion.Mark)">
+            <select class="mark @MarkToClassName(criterion.Mark)">
+                <option>nog in te vullen</option>
+                <option>voldaan</option>
+                <option>niet voldaan</option>
+                <option>twijfel</option>
+            </select>
         </li>
     }
 </ol>
